@@ -1,11 +1,13 @@
 <script>
+	import { enhance } from '$app/forms';
+
 	export let form;
 	export let data;
 </script>
 
 <h1>Log in</h1>
 <p>Register</p>
-<form method="POST" action="?/register">
+<form method="POST" action="?/register" use:enhance>
 	<label>
 		Email
 		<input name="email" type="email" />
@@ -18,7 +20,7 @@
 </form>
 <h3>OR</h3>
 <p>Log in</p>
-<form method="POST" action="?/login">
+<form method="POST" action="?/login" use:enhance>
 	<label>
 		Email
 		<input name="email" type="email" />
